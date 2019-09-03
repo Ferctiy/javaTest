@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/
+    session:
+      timeout: 60
+
+spring:
+  profiles:
+    active: dev
+  redis:
+    host: 192.168.1.105
+    port: 6379
+    password: RedisPassword
+    database: 15
+    timeout: 10000
+  session:
+    store-type: redis

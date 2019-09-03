@@ -1,0 +1,19 @@
+ali:
+  appKey: 203735726
+  appCode: c554b5bb2577476899d49c12263420cd
+  appSecret: 7lql9od46yzyveat8vayl50sl8oqjzu5
+  idCardCert: https://idcardcert.market.alicloudapi.com/idCardCert
+
+router:
+  name: 马超
+  age: 18
+  data: { provce: 陕西, ver: 西安 }
+  lists: [{ a: a, b: b},{c: c, d: d}]
+  Dog:
+    age: 10
+    name: kitte
+
+
+
+
+
