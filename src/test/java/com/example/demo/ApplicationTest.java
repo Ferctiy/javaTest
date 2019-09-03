@@ -19,7 +19,7 @@ import java.util.List;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class DemoApplicationTest {
+public class ApplicationTest {
 
     @Autowired
     private Router router;
@@ -38,15 +38,15 @@ public class DemoApplicationTest {
         System.out.println(JSON.toJSONString(AliYun.instance));
     }
 
-//    @Test
-//    public void redisSetTest() {
-//        redisUserCache.setRedisPrefix(RedisPrefix.User);
-//        UserModel user = new UserModel();
-//        user.setId("5");
-//        user.setAge("2");
-//        user.setName("2");
-//        redisUserCache.append(UserModel.class,user);
-//    }
+    @Test
+    public void redisSetTest() {
+        redisUserCache.setRedisPrefix(RedisPrefix.User);
+        UserModel user = new UserModel();
+        user.setId("5");
+        user.setAge("2");
+        user.setName("2");
+        redisUserCache.append(UserModel.class,user);
+    }
 //
 //    @Test
 //    public void redisGetTest() {

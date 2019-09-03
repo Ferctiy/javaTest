@@ -2,17 +2,15 @@ package com.example.demo.interceptor;
 
 import com.example.demo.component.RedisCache;
 import com.example.demo.model.UserModel;
-import com.example.demo.utils.StringUtils;
+import com.example.demo.utils.RedisPrefix;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import java.util.Optional;
 
 /**
  * @ClassName RedisSessionInterceptor
@@ -29,18 +27,20 @@ public class RedisSessionInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-//        HttpSession session = request.getSession();
-//        String sessionId =userCache.getListItem(UserModel.class,a-> StringUtils.equals(a.getAge(),session.getId()));
-
-        return true;
+        userCache.setRedisPrefix(RedisPrefix.User);
+        Optional< UserModel > userModel = userCache.getListItem(UserModel.class, a -> a.getId().equals(a.getId()));
+        System.out.println("前置处理 ");
+        return userModel.get().getName().equals(2);
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
+        System.out.println("中间处理");
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,Exception ex){
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
+        System.out.println("后置处理");
     }
 
 

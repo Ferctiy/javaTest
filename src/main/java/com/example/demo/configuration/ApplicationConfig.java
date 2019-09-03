@@ -1,6 +1,7 @@
 package com.example.demo.configuration;
 
 import com.example.demo.component.AliYun;
+import com.example.demo.component.Upload;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +14,11 @@ import org.springframework.context.annotation.Configuration;
  * @Version 1.0
  */
 @Configuration
-public class ApplicationConfiguration {
+public class ApplicationConfig {
 
     @Bean
     public CommandLineRunner setAliYun(AliYun aliYun){ return args -> AliYun.instance = aliYun;};
+
+    @Bean
+    public CommandLineRunner setUpload(Upload upload){ return args -> Upload.instance = upload;};
 }

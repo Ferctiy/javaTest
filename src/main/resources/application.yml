@@ -1,9 +1,5 @@
 server:
-  port: 8080
-  servlet:
-    context-path: /api/
-    session:
-      timeout: 60
+  port: 9000
 
 spring:
   profiles:

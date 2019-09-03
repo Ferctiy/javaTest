@@ -18,7 +18,7 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    @RequestMapping("aliPayConnect")
+    @RequestMapping(value = "/aliPayConnect")
     public String aliPayConnect(){
         return paymentService.aliPayConnect();
     }

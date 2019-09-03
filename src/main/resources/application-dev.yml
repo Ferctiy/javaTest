@@ -15,5 +15,12 @@ router:
 
 
 
+logging:
+  file: E:\logger
+  level:
+    root: INFO
 
-
+upload:
+  maxFileSize: 20
+  acceptType: .gif;.jpg;.jpeg;.png;.bmp;.rar;.zip;.xls;.xlsx
+  savePath: E:\upload

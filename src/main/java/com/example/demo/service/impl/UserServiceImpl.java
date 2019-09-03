@@ -31,7 +31,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Map<String ,Object> login(UserModel model){
-
         Map<String,Object> data = new HashMap<>();
         if (model.getName() =="1"){
             userCache.setRedisPrefix(RedisPrefix.Other);

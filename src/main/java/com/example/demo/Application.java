@@ -2,12 +2,18 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
+/**
+ * @ClassName Application
+ * @Description TODO
+ * @Author feroctiy
+ * @Date 2019/8/20 10:26
+ * @Version 1.0
+ */
 @SpringBootApplication
-public class DemoApplication {
+public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
