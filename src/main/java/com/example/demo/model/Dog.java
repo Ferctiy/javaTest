@@ -8,17 +8,22 @@ package com.example.demo.model;
  * @Version 1.0
  */
 public class Dog {
-    private Integer age;
+    private int age;
     private String name;
 
     public Dog() {
     }
 
-    public Integer getAge() {
+    public Dog(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

@@ -68,6 +68,5 @@ public class WebSecurityConfig implements WebMvcConfigurer {
         converter.setFastJsonConfig(config);
         converter.setSupportedMediaTypes(Arrays.asList(MediaType.APPLICATION_JSON,MediaType.APPLICATION_JSON_UTF8));
         converters.add(converter);
-
     }
 }

@@ -5,7 +5,7 @@ import com.example.demo.component.AliYun;
 import com.example.demo.component.RedisCache;
 import com.example.demo.component.Router;
 import com.example.demo.model.UserModel;
-import com.example.demo.service.UserService;
+
 import com.example.demo.utils.AliPayUtils;
 import com.example.demo.utils.RedisPrefix;
 import com.example.demo.utils.StringUtils;
@@ -29,9 +29,9 @@ public class ApplicationTest {
 
     @Autowired
     private RedisCache<UserModel> redisUserCache;
-
-    @Autowired
-    private UserService userService;
+//
+//    @Autowired
+//    private UserService userService;
 
     @Test
     public void contextLoad() {
@@ -61,4 +61,6 @@ public class ApplicationTest {
 //        model.setName("1");
 //        System.out.println("JSON.toJSONString(userService.login(model)) = " + JSON.toJSONString(userService.login(model)));
 //    }
+
+
 }
